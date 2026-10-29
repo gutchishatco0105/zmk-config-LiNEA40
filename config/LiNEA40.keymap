@@ -60,10 +60,8 @@
 &trackball_listener {
     scroller {
         layers = <SCROLL>;
-        input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転
-            <&zip_xy_to_scroll_mapper>;
+        // 向きを逆にしたいときは、次の行の前に <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>, を足す
+        input-processors = <&zip_xy_to_scroll_mapper>;
     };
 };
 
@@ -206,14 +204,19 @@
 
         //2
 
-        // 数字・記号（BS を長押し）。上段の数字の下に、同じ列のShift記号
+        // 数字・記号（BS を長押し）
+        //   上段：数字（普通のキーボードと同じ並び）
+        //   中段（ホーム）：よく使う記号。括弧は左が開き・右が閉じで左右対称、- と = は人差し指の内側
+        //   下段：Shift＋数字の記号（! の上が 1、@ の上が 2 … と同じ列）と ' "
+        //   左親指：_ と +、左下の端：` と \（使用頻度が低いもの）
+        //   < > : ? は普通のキーボードと同じく Shift（Z 長押し）＋ , . ; /
 
         MARK {
             bindings = <
-&kp N1     &kp N2     &kp N3    &kp N4    &kp N5                     &kp N6     &kp N7     &kp N8    &kp N9    &kp N0
-&kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT                  &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
-&kp GRAVE  &kp TILDE  &kp SQT   &kp DQT   &kp PIPE                   &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH
-&trans     &trans     &trans    &trans    &trans    &trans    &trans  &kp UNDER             &kp LBRC  &kp RBRC  &kp PLUS
+&kp N1     &kp N2     &kp N3    &kp N4    &kp N5                         &kp N6     &kp N7     &kp N8    &kp N9    &kp N0
+&kp TILDE  &kp LBRC   &kp LBKT  &kp LPAR  &kp MINUS                      &kp EQUAL  &kp RPAR   &kp RBKT  &kp RBRC  &kp PIPE
+&kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT                      &kp CARET  &kp AMPS   &kp STAR  &kp SQT   &kp DQT
+&kp GRAVE  &kp BSLH   &trans    &trans    &kp UNDER  &kp PLUS    &trans  &trans                &trans    &trans    &kp QMARK
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;

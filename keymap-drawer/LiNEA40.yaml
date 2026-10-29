@@ -112,6 +112,16 @@ layers:
   - '8'
   - '9'
   - '0'
+  - '~'
+  - '{'
+  - '['
+  - (
+  - '-'
+  - '='
+  - )
+  - ']'
+  - '}'
+  - '|'
   - '!'
   - '@'
   - '#'
@@ -120,30 +130,20 @@ layers:
   - ^
   - '&'
   - '*'
-  - (
-  - )
-  - '`'
-  - '~'
   - ''''
   - '"'
-  - '|'
-  - '-'
-  - '='
-  - '['
-  - ']'
+  - '`'
   - \
-  - type: trans
-  - type: trans
   - type: trans
   - t: ''
     type: enc
-  - type: trans
-  - type: trans
-  - type: trans
   - _
-  - '{'
-  - '}'
   - +
+  - type: trans
+  - type: trans
+  - type: trans
+  - type: trans
+  - '?'
   3 移動・AeroSpace（⏎ 長押し）:
   - t: WS1
     h: ⌥1
