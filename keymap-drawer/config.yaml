@@ -1,0 +1,78 @@
+parse_config:
+  trans_legend: {t: "", type: trans}
+  raw_binding_map:
+    "&none": {t: "Enc", h: "エンコーダ", type: enc}
+    "&mt LALT LC(Q)": {t: "Ctrl+Q", h: "⌥ Option"}
+    "&mt LGUI LANG2": {t: "英数", h: "⌘ Cmd"}
+    "&mt RGUI LANG1": {t: "かな", h: "⌘ Cmd"}
+    "&mt LCTRL ESC": {t: "Esc", h: "⌃ Ctrl"}
+    "&mt RCTRL RBKT": {t: "]", h: "⌃ Ctrl"}
+    "&mt LSHIFT Z": {t: "Z", h: "⇧ Shift"}
+    "&mt RIGHT_SHIFT SLASH": {t: "/", h: "⇧ Shift"}
+    "&mt RIGHT_SHIFT BACKSPACE": {t: "⌫", h: "⇧ Shift"}
+    "&lt 3 ENTER": {t: "⏎", h: "移動"}
+    "&lt 5 TAB": {t: "⇥", h: "スクロール"}
+    "&lt 2 BACKSPACE": {t: "⌫", h: "数字記号"}
+    "&lt 4 SPACE": {t: "␣", h: "Fn・動画"}
+    "&mo WIRELESS": {t: "無線", h: "押さえる"}
+    "&vsc_slow": {t: "遅く", h: "動画 s"}
+    "&vsc_fast": {t: "速く", h: "動画 d"}
+    "&vsc_full": {t: "全画面", h: "動画 f"}
+    "&kp LA(N1)": {t: "WS1", h: "⌥1"}
+    "&kp LA(N2)": {t: "WS2", h: "⌥2"}
+    "&kp LA(N3)": {t: "WS3", h: "⌥3"}
+    "&kp LA(N4)": {t: "WS4", h: "⌥4"}
+    "&kp LA(F)": {t: "全画面", h: "⌥F"}
+    "&kp LG(LEFT)": {t: "行頭", h: "⌘←"}
+    "&kp LG(RIGHT)": {t: "行末", h: "⌘→"}
+    "&kp LC(UP)": {t: "一覧", h: "⌃↑"}
+    "&kp LA(LEFT)": {t: "単語←", h: "⌥←"}
+    "&kp LA(RIGHT)": {t: "単語→", h: "⌥→"}
+    "&kp LG(Z)": {t: "⌘Z", h: "戻す"}
+    "&kp LG(X)": {t: "⌘X", h: "切取"}
+    "&kp LG(C)": {t: "⌘C", h: "複製"}
+    "&kp LG(V)": {t: "⌘V", h: "貼付"}
+    "&kp LS(LG(N3))": {t: "画面撮影", h: "⇧⌘3"}
+    "&kp LS(LG(N4))": {t: "範囲撮影", h: "⇧⌘4"}
+    "&kp C_BRI_DN": "明るさ−"
+    "&kp C_BRI_UP": "明るさ+"
+    "&kp C_PREV": "前の曲"
+    "&kp C_PP": "再生"
+    "&kp C_NEXT": "次の曲"
+    "&kp C_MUTE": "ミュート"
+    "&kp C_VOL_DN": "音量−"
+    "&kp C_VOL_UP": "音量+"
+    "&mkp MB1": {t: "左", h: "クリック"}
+    "&mkp MB2": {t: "右", h: "クリック"}
+    "&mkp MB3": "中"
+    "&mkp MB4": "戻る"
+    "&mkp MB5": "進む"
+    "&bootloader": {t: "書き込み", h: "モード"}
+    "&studio_unlock": {t: "Studio", h: "解除"}
+    "&bt BT_SEL 0": {t: "Mac", h: "BT0"}
+    "&bt BT_SEL 1": {t: "iPad", h: "BT1"}
+    "&bt BT_SEL 2": {t: "BT2"}
+    "&bt BT_SEL 3": {t: "BT3"}
+    "&bt BT_SEL 4": {t: "BT4"}
+    "&bt BT_CLR": {t: "接続解除"}
+    "&bt BT_CLR_ALL": {t: "全解除"}
+    "&kp PG_DN": "PgDn"
+    "&kp PG_UP": "PgUp"
+    "&kp DEL": "Del"
+    "&kp LCTRL": "⌃ Ctrl"
+    "&kp LALT": "⌥ Opt"
+    "&kp LSHIFT": "⇧ Shift"
+    "&kp LGUI": "⌘ Cmd"
+    "&kp LEFT": "←"
+    "&kp DOWN": "↓"
+    "&kp UP": "↑"
+    "&kp RIGHT": "→"
+draw_config:
+  key_w: 64
+  key_h: 60
+  split_gap: 40
+  combo_w: 30
+  combo_h: 24
+  svg_extra_style: |
+    text { font-family: "Noto Sans CJK JP", "Hiragino Sans", sans-serif; }
+    rect.enc { fill: #e4e2da; }

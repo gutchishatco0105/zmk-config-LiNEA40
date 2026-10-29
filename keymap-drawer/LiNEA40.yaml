@@ -1,0 +1,309 @@
+layout: {zmk_keyboard: LiNEA40}
+layers:
+  0 基本:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - {t: Z, h: ⇧ Shift}
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - {t: ⌫, h: ⇧ Shift}
+  - {t: Esc, h: ⌃ Ctrl}
+  - {t: Ctrl+Q, h: ⌥ Option}
+  - {t: 英数, h: ⌘ Cmd}
+  - {t: Enc, h: エンコーダ, type: enc}
+  - {t: ⏎, h: 移動}
+  - {t: ⇥, h: スクロール}
+  - {t: ⌫, h: 数字記号}
+  - {t: ␣, h: Fn・動画}
+  - {t: ']', h: ⌃ Ctrl}
+  - {t: かな, h: ⌘ Cmd}
+  - {t: /, h: ⇧ Shift}
+  1 マウス（トラボを動かすと自動）:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {t: 左, h: クリック}
+  - {t: 右, h: クリック}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  2 数字・記号（⌫ 長押し）:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - '`'
+  - '~'
+  - ''''
+  - '"'
+  - '|'
+  - '-'
+  - '='
+  - '['
+  - ']'
+  - \
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - _
+  - '{'
+  - '}'
+  - +
+  3 移動・AeroSpace（⏎ 長押し）:
+  - {t: WS1, h: ⌥1}
+  - {t: WS2, h: ⌥2}
+  - {t: WS3, h: ⌥3}
+  - {t: WS4, h: ⌥4}
+  - {t: 全画面, h: ⌥F}
+  - {t: 行頭, h: ⌘←}
+  - PgDn
+  - PgUp
+  - {t: 行末, h: ⌘→}
+  - {t: 一覧, h: ⌃↑}
+  - ⌃ Ctrl
+  - ⌥ Opt
+  - ⇧ Shift
+  - ⌘ Cmd
+  - {type: trans}
+  - ←
+  - ↓
+  - ↑
+  - →
+  - {type: trans}
+  - {t: ⌘Z, h: 戻す}
+  - {t: ⌘X, h: 切取}
+  - {t: ⌘C, h: 複製}
+  - {t: ⌘V, h: 貼付}
+  - {type: trans}
+  - {t: 単語←, h: ⌥←}
+  - {type: trans}
+  - {type: trans}
+  - {t: 単語→, h: ⌥→}
+  - Del
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  4 Fn・動画（␣ 長押し）:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - {type: trans}
+  - {t: 遅く, h: 動画 s}
+  - {t: 速く, h: 動画 d}
+  - {t: 全画面, h: 動画 f}
+  - {type: trans}
+  - 前の曲
+  - 再生
+  - 次の曲
+  - {type: trans}
+  - {type: trans}
+  - F11
+  - F12
+  - 明るさ−
+  - 明るさ+
+  - {type: trans}
+  - ミュート
+  - 音量−
+  - 音量+
+  - {t: 画面撮影, h: ⇧⌘3}
+  - {t: 範囲撮影, h: ⇧⌘4}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {t: 無線, h: 押さえる}
+  - {type: trans}
+  - {type: trans}
+  5 スクロール（⇥ 長押し＋トラボ）:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  6 無線・システム（␣ 長押し＋］）:
+  - {t: Mac, h: BT0}
+  - {t: iPad, h: BT1}
+  - BT2
+  - BT3
+  - BT4
+  - {t: Mac, h: BT0}
+  - {t: iPad, h: BT1}
+  - BT2
+  - BT3
+  - BT4
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {t: 書き込み, h: モード}
+  - {t: Studio, h: 解除}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - 接続解除
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - 全解除
+combos:
+- p: [17, 16]
+  k: 中
+  l: [1 マウス（トラボを動かすと自動）]
+- p: [18, 17]
+  k: {t: 右, h: クリック}
+  l: [1 マウス（トラボを動かすと自動）]
+- p: [27, 28]
+  k: 戻る
+  l: [1 マウス（トラボを動かすと自動）]
+- p: [26, 27]
+  k: 進む
+  l: [1 マウス（トラボを動かすと自動）]
