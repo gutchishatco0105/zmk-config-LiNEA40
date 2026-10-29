@@ -131,6 +131,26 @@
     };
 
     behaviors {
+        // 親指のレイヤーキー：押さえている間に別のキーを押して離したら、時間に関係なくレイヤー扱い
+        // （Space＋S をパッと押しても、スペースが出て動画が止まらないように）
+        lt_th: lt_th {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&kp>;
+        };
+
+        // Space 専用：上と同じ判定に加えて、文字を打った直後（0.15秒以内）は必ず普通のスペース
+        lt_spc: lt_spc {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <150>;
+            bindings = <&mo>, <&kp>;
+        };
+
         // エンコーダで動画の速度：右に回すと速く、左に回すと遅く
         vsc_speed: vsc_speed {
             compatible = "zmk,behavior-sensor-rotate";
@@ -167,7 +187,7 @@
 &kp Q             &kp W              &kp E           &kp R    &kp T                                      &kp Y        &kp U  &kp I                &kp O              &kp P
 &kp A             &kp S              &kp D           &kp F    &kp G                                      &kp H        &kp J  &kp K                &kp L              &kp SEMICOLON
 &mt LSHIFT Z      &kp X              &kp C           &kp V    &kp B                                      &kp N        &kp M  &kp COMMA            &kp DOT            &mt RIGHT_SHIFT BACKSPACE
-&mt LCTRL ESC     &mt LALT LC(Q)     &mt LGUI LANG2  &none    &lt 3 ENTER  &lt 5 TAB    &lt 2 BACKSPACE  &lt 4 SPACE         &mt RCTRL RBKT       &mt RGUI LANG1     &mt RIGHT_SHIFT SLASH
+&mt LCTRL ESC     &mt LALT LC(Q)     &mt LGUI LANG2  &none    &lt_th 3 ENTER  &lt_th 5 TAB    &lt_th 2 BACKSPACE  &lt_spc 4 SPACE        &mt RCTRL RBKT       &mt RGUI LANG1     &mt RIGHT_SHIFT SLASH
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;

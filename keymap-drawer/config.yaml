@@ -10,10 +10,10 @@ parse_config:
     "&mt LSHIFT Z": {t: "Z", h: "⇧ Shift"}
     "&mt RIGHT_SHIFT SLASH": {t: "/", h: "⇧ Shift"}
     "&mt RIGHT_SHIFT BACKSPACE": {t: "⌫", h: "⇧ Shift"}
-    "&lt 3 ENTER": {t: "⏎", h: "移動"}
-    "&lt 5 TAB": {t: "⇥", h: "スクロール"}
-    "&lt 2 BACKSPACE": {t: "⌫", h: "数字記号"}
-    "&lt 4 SPACE": {t: "␣", h: "Fn・動画"}
+    "&lt_th 3 ENTER": {t: "⏎", h: "移動"}
+    "&lt_th 5 TAB": {t: "⇥", h: "スクロール"}
+    "&lt_th 2 BACKSPACE": {t: "⌫", h: "数字記号"}
+    "&lt_spc 4 SPACE": {t: "␣", h: "Fn・動画"}
     "&mo WIRELESS": {t: "無線", h: "押さえる"}
     "&vsc_slow": {t: "遅く", h: "動画 s"}
     "&vsc_fast": {t: "速く", h: "動画 d"}
