@@ -249,7 +249,7 @@ rect.enc { fill: #e4e2da; }
 </g>
 <g transform="translate(750, 150)" class="key keypos-29">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">⌫</text>
+<text x="0" y="0" class="key tap">/</text>
 <text x="0" y="26" class="key hold">⇧ Shift</text>
 </g>
 <g transform="translate(30, 210)" class="key keypos-30">
@@ -294,18 +294,18 @@ rect.enc { fill: #e4e2da; }
 </g>
 <g transform="translate(630, 210)" class="key keypos-38">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">]</text>
-<text x="0" y="26" class="key hold">⌃ Ctrl</text>
-</g>
-<g transform="translate(690, 210)" class="key keypos-39">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">かな</text>
 <text x="0" y="26" class="key hold">⌘ Cmd</text>
 </g>
+<g transform="translate(690, 210)" class="key keypos-39">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<text x="0" y="0" class="key tap">[</text>
+<text x="0" y="26" class="key hold"><tspan style="font-size: 88%">⌥ Option</tspan></text>
+</g>
 <g transform="translate(750, 210)" class="key keypos-40">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">/</text>
-<text x="0" y="26" class="key hold">⇧ Shift</text>
+<text x="0" y="0" class="key tap">]</text>
+<text x="0" y="26" class="key hold">⌃ Ctrl</text>
 </g>
 </g>
 </g>
@@ -1074,8 +1074,8 @@ rect.enc { fill: #e4e2da; }
 </g>
 </g>
 </g>
-<g transform="translate(30, 1776)" class="layer-6 無線・システム（␣ 長押し＋］）">
-<text x="0" y="28" class="label" id="x_x">6 無線・システム（␣ 長押し＋］）:</text>
+<g transform="translate(30, 1776)" class="layer-6 無線・システム（␣ 長押し＋かな）">
+<text x="0" y="28" class="label" id="x_x">6 無線・システム（␣ 長押し＋かな）:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(30, 30)" class="key keypos-0">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>

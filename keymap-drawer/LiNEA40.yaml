@@ -32,7 +32,7 @@ layers:
   - M
   - ','
   - .
-  - t: ⌫
+  - t: /
     h: ⇧ Shift
   - t: Esc
     h: ⌃ Ctrl
@@ -50,12 +50,12 @@ layers:
     h: 数字記号
   - t: ␣
     h: Fn・動画
-  - t: ']'
-    h: ⌃ Ctrl
   - t: かな
     h: ⌘ Cmd
-  - t: /
-    h: ⇧ Shift
+  - t: '['
+    h: ⌥ Option
+  - t: ']'
+    h: ⌃ Ctrl
   1 マウス（トラボを動かすと自動）:
   - type: trans
   - type: trans
@@ -294,7 +294,7 @@ layers:
   - type: trans
   - type: trans
   - type: trans
-  6 無線・システム（␣ 長押し＋］）:
+  6 無線・システム（␣ 長押し＋かな）:
   - t: Mac
     h: BT0
   - t: iPad

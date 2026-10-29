@@ -176,16 +176,17 @@
 
         //0 基本（Mac・US配列）
         //  原則：下段の端3つ（修飾キー）は左右両方に置き、組み合わせるキーは反対側の手で押す
+        //  修飾キーは左右対称：外から Ctrl・Option・Cmd ／ Cmd・Option・Ctrl、Shift は Z と /
         //  下段：Esc/Ctrl  Ctrl+Q(Leader)/Option  英数/Cmd  [エンコーダ]  Enter/L3  Tab/L5(スクロール)
-        //      | BS/L2(数字)  Space/L4  [トラボ]  ]/Ctrl  かな/Cmd  //Shift
-        //  Z の長押しは左の Shift
+        //      | BS/L2(数字)  Space/L4  [トラボ]  かな/Cmd  [/Option  ]/Ctrl
+        //  / は US 配列と同じ「. の右」。長押しで右の Shift
 
         default_layer {
             bindings = <
 &kp Q             &kp W              &kp E           &kp R    &kp T                                      &kp Y        &kp U  &kp I                &kp O              &kp P
 &kp A             &kp S              &kp D           &kp F    &kp G                                      &kp H        &kp J  &kp K                &kp L              &kp SEMICOLON
-&mt LSHIFT Z      &kp X              &kp C           &kp V    &kp B                                      &kp N        &kp M  &kp COMMA            &kp DOT            &mt RIGHT_SHIFT BACKSPACE
-&mt LCTRL ESC     &mt LALT LC(Q)     &mt LGUI LANG2  &none    &lt_th 3 ENTER  &lt_th 5 TAB    &lt_th 2 BACKSPACE  &lt_spc 4 SPACE        &mt RCTRL RBKT       &mt RGUI LANG1     &mt RIGHT_SHIFT SLASH
+&mt LSHIFT Z      &kp X              &kp C           &kp V    &kp B                                      &kp N        &kp M  &kp COMMA            &kp DOT            &mt RIGHT_SHIFT SLASH
+&mt LCTRL ESC     &mt LALT LC(Q)     &mt LGUI LANG2  &none    &lt_th 3 ENTER  &lt_th 5 TAB    &lt_th 2 BACKSPACE  &lt_spc 4 SPACE        &mt RGUI LANG1       &mt RALT LBKT      &mt RCTRL RBKT
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -242,7 +243,7 @@
 
         // ファンクション・メディア（Space を長押し）
         // 左手の S / D / F ＝ 動画の 遅く / 速く / 全画面（いつもの位置のまま）
-        // エンコーダ ＝ 動画の速度。] の位置を押さえると無線・システムレイヤー
+        // エンコーダ ＝ 動画の速度。かな（右の Cmd）の位置を押さえると無線・システムレイヤー
 
         FUNCTION {
             bindings = <
@@ -272,7 +273,7 @@
 
         //6
 
-        // 無線・システム（Space を長押ししたまま ] の位置を押さえる）
+        // 無線・システム（Space を長押ししたまま かな の位置を押さえる）
         // 上段：プロファイル 0＝Mac、1＝iPad … / 左下：書き込みモード、Studioロック解除
 
         WIRELESS {

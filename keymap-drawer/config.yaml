@@ -7,6 +7,7 @@ parse_config:
     "&mt RGUI LANG1": {t: "かな", h: "⌘ Cmd"}
     "&mt LCTRL ESC": {t: "Esc", h: "⌃ Ctrl"}
     "&mt RCTRL RBKT": {t: "]", h: "⌃ Ctrl"}
+    "&mt RALT LBKT": {t: "[", h: "⌥ Option"}
     "&mt LSHIFT Z": {t: "Z", h: "⇧ Shift"}
     "&mt RIGHT_SHIFT SLASH": {t: "/", h: "⇧ Shift"}
     "&mt RIGHT_SHIFT BACKSPACE": {t: "⌫", h: "⇧ Shift"}
