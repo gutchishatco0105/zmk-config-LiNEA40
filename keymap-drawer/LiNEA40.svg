@@ -267,10 +267,10 @@ rect.enc { fill: #e4e2da; }
 <text x="0" y="0" class="key tap">英数</text>
 <text x="0" y="26" class="key hold">⌘ Cmd</text>
 </g>
-<g transform="translate(210, 210)" class="key enc keypos-33">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key enc"/>
-<text x="0" y="0" class="key enc tap">Enc</text>
-<text x="0" y="26" class="key enc hold">エンコーダ</text>
+<g transform="translate(210, 210)" class="key keypos-33">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<text x="0" y="0" class="key tap">Enc</text>
+<text x="0" y="26" class="key hold">エンコーダ</text>
 </g>
 <g transform="translate(270, 210)" class="key keypos-34">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -415,8 +415,8 @@ rect.enc { fill: #e4e2da; }
 <g transform="translate(150, 210)" class="key trans keypos-32">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(210, 210)" class="key trans keypos-33">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(210, 210)" class="key enc keypos-33">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key enc"/>
 </g>
 <g transform="translate(270, 210)" class="key trans keypos-34">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
@@ -590,8 +590,8 @@ rect.enc { fill: #e4e2da; }
 <g transform="translate(150, 210)" class="key trans keypos-32">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(210, 210)" class="key trans keypos-33">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(210, 210)" class="key enc keypos-33">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key enc"/>
 </g>
 <g transform="translate(270, 210)" class="key trans keypos-34">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
@@ -673,30 +673,24 @@ rect.enc { fill: #e4e2da; }
 </g>
 <g transform="translate(30, 90)" class="key keypos-10">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">⌃</tspan><tspan x="0" dy="1.2em">Ctrl</tspan>
-</text>
+<text x="0" y="0" class="key tap">WS5</text>
+<text x="0" y="26" class="key hold">⌥5</text>
 </g>
 <g transform="translate(90, 90)" class="key keypos-11">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">⌥</tspan><tspan x="0" dy="1.2em">Opt</tspan>
-</text>
+<text x="0" y="0" class="key tap">WS6</text>
+<text x="0" y="26" class="key hold">⌥6</text>
 </g>
 <g transform="translate(150, 90)" class="key keypos-12">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">⇧</tspan><tspan x="0" dy="1.2em">Shift</tspan>
-</text>
+<text x="0" y="0" class="key tap">WS7</text>
+<text x="0" y="26" class="key hold">⌥7</text>
 </g>
 <g transform="translate(210, 90)" class="key keypos-13">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">⌘</tspan><tspan x="0" dy="1.2em">Cmd</tspan>
-</text>
 </g>
-<g transform="translate(270, 90)" class="key trans keypos-14">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(270, 90)" class="key keypos-14">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 </g>
 <g transform="translate(510, 90)" class="key keypos-15">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -717,28 +711,24 @@ rect.enc { fill: #e4e2da; }
 <g transform="translate(750, 90)" class="key trans keypos-19">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(30, 150)" class="key keypos-20">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">⌘Z</text>
-<text x="0" y="26" class="key hold">戻す</text>
+<g transform="translate(30, 150)" class="key trans keypos-20">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
 <g transform="translate(90, 150)" class="key keypos-21">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">⌘X</text>
-<text x="0" y="26" class="key hold">切取</text>
+<text x="0" y="0" class="key tap">WS8</text>
+<text x="0" y="26" class="key hold">⌥8</text>
 </g>
 <g transform="translate(150, 150)" class="key keypos-22">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">⌘C</text>
-<text x="0" y="26" class="key hold">複製</text>
+<text x="0" y="0" class="key tap">WS9</text>
+<text x="0" y="26" class="key hold">⌥9</text>
 </g>
 <g transform="translate(210, 150)" class="key keypos-23">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">⌘V</text>
-<text x="0" y="26" class="key hold">貼付</text>
 </g>
-<g transform="translate(270, 150)" class="key trans keypos-24">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(270, 150)" class="key keypos-24">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 </g>
 <g transform="translate(510, 150)" class="key keypos-25">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -769,8 +759,8 @@ rect.enc { fill: #e4e2da; }
 <g transform="translate(150, 210)" class="key trans keypos-32">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(210, 210)" class="key trans keypos-33">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(210, 210)" class="key enc keypos-33">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key enc"/>
 </g>
 <g transform="translate(270, 210)" class="key trans keypos-34">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
@@ -927,8 +917,8 @@ rect.enc { fill: #e4e2da; }
 <g transform="translate(150, 210)" class="key trans keypos-32">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(210, 210)" class="key trans keypos-33">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(210, 210)" class="key enc keypos-33">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key enc"/>
 </g>
 <g transform="translate(270, 210)" class="key trans keypos-34">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
@@ -1057,8 +1047,8 @@ rect.enc { fill: #e4e2da; }
 <g transform="translate(150, 210)" class="key trans keypos-32">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(210, 210)" class="key trans keypos-33">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(210, 210)" class="key enc keypos-33">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key enc"/>
 </g>
 <g transform="translate(270, 210)" class="key trans keypos-34">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
@@ -1204,8 +1194,8 @@ rect.enc { fill: #e4e2da; }
 <g transform="translate(150, 210)" class="key trans keypos-32">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(210, 210)" class="key trans keypos-33">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(210, 210)" class="key enc keypos-33">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key enc"/>
 </g>
 <g transform="translate(270, 210)" class="key trans keypos-34">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>

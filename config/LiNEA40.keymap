@@ -15,6 +15,11 @@
 #define SCROLL 5
 #define WIRELESS 6
 
+// 長押しの判定：別のキーを「押して離しきった」ときだけ長押し扱い（z→o の素早い連打で ⇧O に化けないように）
+&mt {
+    flavor = "balanced";
+};
+
 //mouse cursol
 
 &mmv {
@@ -196,15 +201,16 @@
 
         //3
 
-        // 移動・編集（Enter を長押し）。右手HJKLで矢印、左手に修飾キーと⌘Z/X/C/V
-        // 左上の段は AeroSpace：⌥1〜4（ワークスペース）、⌥F（フルスクリーン）
-        // ウィンドウをワークスペースへ移す ⌥⇧1〜4 は、右の Shift（/ の長押し）を足す
+        // 移動・AeroSpace（Enter を長押し）。右手HJKLで矢印
+        // 左手は AeroSpace のワークスペース。段ごとにモニター：
+        //   上段 1〜4＝メイン（GW2790QT）＋T＝全画面 / 中段 5〜7＝サブ（GW2491） / 下段 8〜9＝本体
+        // ウィンドウを移す ⌥⇧1〜9 は、右の Shift（/ の長押し）を足す。Z は基本レイヤーの Shift のまま
 
         CURSOR {
             bindings = <
 &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(F)                &kp LG(LEFT)  &kp PG_DN  &kp PG_UP  &kp LG(RIGHT)  &kp LC(UP)
-&kp LCTRL   &kp LALT    &kp LSHIFT  &kp LGUI    &trans                   &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT      &trans
-&kp LG(Z)   &kp LG(X)   &kp LG(C)   &kp LG(V)   &trans                   &kp LA(LEFT)  &trans     &trans     &kp LA(RIGHT)  &kp DEL
+&kp LA(N5)  &kp LA(N6)  &kp LA(N7)  &none       &none                    &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT      &trans
+&trans      &kp LA(N8)  &kp LA(N9)  &none       &none                    &kp LA(LEFT)  &trans     &trans     &kp LA(RIGHT)  &kp DEL
 &trans      &trans      &trans      &trans      &trans  &trans    &trans  &trans                  &trans     &trans         &trans
             >;
         };

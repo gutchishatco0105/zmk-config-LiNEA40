@@ -1,7 +1,7 @@
 parse_config:
   trans_legend: {t: "", type: trans}
   raw_binding_map:
-    "&none": {t: "Enc", h: "エンコーダ", type: enc}
+    "&none": ""
     "&mt LALT LC(Q)": {t: "Ctrl+Q", h: "⌥ Option"}
     "&mt LGUI LANG2": {t: "英数", h: "⌘ Cmd"}
     "&mt RGUI LANG1": {t: "かな", h: "⌘ Cmd"}
@@ -22,6 +22,11 @@ parse_config:
     "&kp LA(N2)": {t: "WS2", h: "⌥2"}
     "&kp LA(N3)": {t: "WS3", h: "⌥3"}
     "&kp LA(N4)": {t: "WS4", h: "⌥4"}
+    "&kp LA(N5)": {t: "WS5", h: "⌥5"}
+    "&kp LA(N6)": {t: "WS6", h: "⌥6"}
+    "&kp LA(N7)": {t: "WS7", h: "⌥7"}
+    "&kp LA(N8)": {t: "WS8", h: "⌥8"}
+    "&kp LA(N9)": {t: "WS9", h: "⌥9"}
     "&kp LA(F)": {t: "全画面", h: "⌥F"}
     "&kp LG(LEFT)": {t: "行頭", h: "⌘←"}
     "&kp LG(RIGHT)": {t: "行末", h: "⌘→"}
