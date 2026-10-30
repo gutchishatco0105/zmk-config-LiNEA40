@@ -1,7 +1,7 @@
 layout:
   zmk_keyboard: LiNEA40
 layers:
-  0 基本:
+  0 基本（F＋G＝英数、H＋J＝かな）:
   - Q
   - W
   - E
@@ -35,8 +35,7 @@ layers:
   - ⇧ Shift
   - t: ⇥ Tab
     h: AeroSpace
-  - t: 英数
-    h: ⌘ Cmd
+  - ⌘ Cmd
   - t: Enc
     h: エンコーダ
   - t: ⏎
@@ -46,8 +45,7 @@ layers:
   - t: ⌫
     h: 数字記号
   - SPACE
-  - t: かな
-    h: ⌘ Cmd
+  - ⌘ Cmd
   - -（ー）
   - ⇧ Shift
   1 マウス（トラボを動かすと自動）:
@@ -303,7 +301,7 @@ layers:
   - type: trans
   - Alt+-
   - type: trans
-  6 無線・システム（⏎＋⌫＋かな）:
+  6 無線・システム（⏎＋⌫＋右Cmd）:
   - t: Mac
     h: BT0
   - t: iPad
@@ -353,6 +351,18 @@ layers:
   - type: trans
   - 全解除
 combos:
+- p:
+  - 13
+  - 14
+  k: 英数
+  l:
+  - 0 基本（F＋G＝英数、H＋J＝かな）
+- p:
+  - 15
+  - 16
+  k: かな
+  l:
+  - 0 基本（F＋G＝英数、H＋J＝かな）
 - p:
   - 17
   - 16

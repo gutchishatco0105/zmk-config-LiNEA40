@@ -78,6 +78,24 @@
     combos {
         compatible = "zmk,combos";
 
+        // 日本語入力の切り替え：F＋G ＝ 英数、H＋J ＝ かな（Mac・iPad 共通）
+        // 基本レイヤーのときだけ。文字を打った直後（0.15秒以内）は無効にして誤爆を防ぐ
+        Eisu {
+            bindings = <&kp LANG2>;
+            key-positions = <13 14>;
+            layers = <0>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
+        };
+
+        Kana {
+            bindings = <&kp LANG1>;
+            key-positions = <15 16>;
+            layers = <0>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
+        };
+
         // Windows用だった S+D（全角/半角）と U+I（Insert）、
         // 英文の「io」で誤爆する I+O（Delete）は削除。
         // クリック系の同時押しは、Vimium の j/k などで誤爆しないよう
@@ -177,9 +195,9 @@
 
         //0 基本（Mac・US配列）
         //  Shift は長押し判定のない普通のキー（左右の下段の一番外）
-        //  左右対称なのは Cmd（短く押すと 英数 / かな）だけ
-        //  下段：Shift  Tab/AeroSpace  英数/Cmd  [エンコーダ]  Enter/移動  Esc/Ctrl（親指）
-        //      | BS/数字記号  Space  [トラボ]  かな/Cmd  -（ー）  Shift
+        //  Cmd は左右対称の普通のキー。英数 ＝ F＋G 同時押し、かな ＝ H＋J 同時押し
+        //  下段：Shift  Tab/AeroSpace  Cmd  [エンコーダ]  Enter/移動  Esc/Ctrl（親指）
+        //      | BS/数字記号  Space  [トラボ]  Cmd  -（ー）  Shift
         //  Enter と BS を両方長押し ＝ Fn・メディア・動画（たまに使うもの）
         //  WezTerm の Leader（Ctrl+Q）は 親指の Ctrl ＋ Q
 
@@ -188,7 +206,7 @@
 &kp Q             &kp W              &kp E           &kp R    &kp T                                      &kp Y        &kp U  &kp I                &kp O              &kp P
 &kp A             &kp S              &kp D           &kp F    &kp G                                      &kp H        &kp J  &kp K                &kp L              &kp SEMICOLON
 &kp Z             &kp X              &kp C           &kp V    &kp B                                      &kp N        &kp M  &kp COMMA            &kp DOT            &kp SLASH
-&kp LSHIFT        &lt_th AERO TAB    &mt LGUI LANG2  &none    &lt_th 3 ENTER  &mt LCTRL ESC    &lt_th 2 BACKSPACE  &kp SPACE        &mt RGUI LANG1       &kp MINUS          &kp RSHIFT
+&kp LSHIFT        &lt_th AERO TAB    &kp LGUI        &none    &lt_th 3 ENTER  &mt LCTRL ESC    &lt_th 2 BACKSPACE  &kp SPACE        &kp RGUI             &kp MINUS          &kp RSHIFT
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -242,7 +260,7 @@
 
         // ファンクション・メディア・動画（Enter と BS を両方長押し。たまにしか使わないものをここに）
         // 左手の S / D / F ＝ 動画の 遅く / 速く / 全画面
-        // エンコーダ ＝ 動画の速度。かな（右の Cmd）の位置を押さえると無線・システムレイヤー
+        // エンコーダ ＝ 動画の速度。右の Cmd の位置を押さえると無線・システムレイヤー
 
         FUNCTION {
             bindings = <
@@ -274,7 +292,7 @@
 
         //6
 
-        // 無線・システム（Enter と BS を長押ししたまま かな の位置を押さえる）
+        // 無線・システム（Enter と BS を長押ししたまま 右の Cmd の位置を押さえる）
         // 上段：プロファイル 0＝Mac、1＝iPad … / 左下：書き込みモード、Studioロック解除
 
         WIRELESS {
