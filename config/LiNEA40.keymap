@@ -12,7 +12,7 @@
 #define MARK 2
 #define CURSOR 3
 #define FUNCTION 4
-#define SCROLL 5
+#define AERO 5
 #define WIRELESS 6
 
 // 長押しの判定：別のキーを「押して離しきった」ときだけ長押し扱い（z→o の素早い連打で ⇧O に化けないように）
@@ -59,7 +59,7 @@
 
 &trackball_listener {
     scroller {
-        layers = <SCROLL>;
+        layers = <CURSOR>;
         // 向きを逆にしたいときは、次の行の前に <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>, を足す
         input-processors = <&zip_xy_to_scroll_mapper>;
     };
@@ -150,18 +150,6 @@
             bindings = <&mo>, <&kp>;
         };
 
-        // SandS：Space を長押しで Shift。文字を打った直後（0.15秒以内）は必ず普通のスペース
-        // トン・ギューならスペースを連打
-        sands: sands {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
-            bindings = <&kp>, <&kp>;
-        };
-
         // エンコーダで動画の速度：右に回すと速く、左に回すと遅く
         vsc_speed: vsc_speed {
             compatible = "zmk,behavior-sensor-rotate";
@@ -188,19 +176,19 @@
         compatible = "zmk,keymap";
 
         //0 基本（Mac・US配列）
-        //  原則：下段の端3つ（修飾キー）は左右両方に置き、組み合わせるキーは反対側の手で押す
+        //  Shift は長押し判定のない普通のキー（左右の下段の一番外）
+        //  左右対称なのは Cmd（短く押すと 英数 / かな）だけ
+        //  下段：Shift  Tab/AeroSpace  英数/Cmd  [エンコーダ]  Enter/移動  Esc/Ctrl（親指）
+        //      | BS/数字記号  Space  [トラボ]  かな/Cmd  -（ー）  Shift
         //  Enter と BS を両方長押し ＝ Fn・メディア・動画（たまに使うもの）
-        //  修飾キーは左右対称：外から Ctrl・Option・Cmd ／ Cmd・Option・Ctrl、Shift は Z と /
-        //  下段：Esc/Ctrl  Ctrl+Q(Leader)/Option  英数/Cmd  [エンコーダ]  Enter/L3  Tab/L5(スクロール)
-        //      | BS/L2(数字)  Space/Shift(SandS)  [トラボ]  かな/Cmd  [/Option  ]/Ctrl
-        //  / は US 配列と同じ「. の右」。長押しで右の Shift
+        //  WezTerm の Leader（Ctrl+Q）は 親指の Ctrl ＋ Q
 
         default_layer {
             bindings = <
 &kp Q             &kp W              &kp E           &kp R    &kp T                                      &kp Y        &kp U  &kp I                &kp O              &kp P
 &kp A             &kp S              &kp D           &kp F    &kp G                                      &kp H        &kp J  &kp K                &kp L              &kp SEMICOLON
-&mt LSHIFT Z      &kp X              &kp C           &kp V    &kp B                                      &kp N        &kp M  &kp COMMA            &kp DOT            &mt RIGHT_SHIFT SLASH
-&mt LCTRL ESC     &mt LALT LC(Q)     &mt LGUI LANG2  &none    &lt_th 3 ENTER  &lt_th 5 TAB    &lt_th 2 BACKSPACE  &sands LSHIFT SPACE       &mt RGUI LANG1       &mt RALT LBKT      &mt RCTRL RBKT
+&kp Z             &kp X              &kp C           &kp V    &kp B                                      &kp N        &kp M  &kp COMMA            &kp DOT            &kp SLASH
+&kp LSHIFT        &lt_th AERO TAB    &mt LGUI LANG2  &none    &lt_th 3 ENTER  &mt LCTRL ESC    &lt_th 2 BACKSPACE  &kp SPACE        &mt RGUI LANG1       &kp MINUS          &kp RSHIFT
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -221,7 +209,7 @@
 
         // 数字・記号（BS を長押し）mozumasu さん流
         //   左手：テンキー型の数字と + - * / .  右手：記号
-        //   左親指の Tab 位置 ＝ _ 、左下の Cmd 位置 ＝ = 、右下 ＝ | ?（右の Cmd は残すので ⌘＋数字が打てる）
+        //   左下：` | = 、左親指（Esc の位置）＝ _ 、右下 ＝ [ ]（右の Cmd は残すので ⌘＋数字が打てる）
         //   Enter の位置は空けておく（Enter と BS の同時長押しで Fn レイヤーに入るため）
         //   < > : ? は普通のキーボードと同じく Shift ＋ , . ; /
 
@@ -230,7 +218,7 @@
 &kp MINUS  &kp N7     &kp N8     &kp N9    &kp PLUS                     &kp CARET  &kp AMPS   &kp TILDE  &kp LPAR  &kp RPAR
 &kp SLASH  &kp N4     &kp N5     &kp N6    &kp STAR                     &kp EXCL   &kp AT     &kp HASH   &kp DLLR  &kp PRCNT
 &kp N0     &kp N1     &kp N2     &kp N3    &kp DOT                      &kp SQT    &kp DQT    &kp LBRC   &kp RBRC  &kp BSLH
-&kp GRAVE  &trans     &kp EQUAL  &trans    &trans     &kp UNDER   &trans  &trans               &trans     &kp PIPE  &kp QMARK
+&kp GRAVE  &kp PIPE   &kp EQUAL  &trans    &trans     &kp UNDER   &trans  &trans               &trans     &kp LBKT  &kp RBKT
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -238,16 +226,14 @@
 
         //3
 
-        // 移動・AeroSpace（Enter を長押し）。右手HJKLで矢印
-        // 左手は AeroSpace のワークスペース。段ごとにモニター：
-        //   上段 1〜4＝メイン（GW2790QT）＋T＝全画面 / 中段 5〜7＝サブ（GW2491） / 下段 8〜9＝本体
-        // ウィンドウを移す ⌥⇧1〜9 は、右の Shift（/ の長押し）を足す。Z は基本レイヤーの Shift のまま
+        // 移動（Enter を長押し）。右手HJKLで矢印、トラックボールを転がすとスクロール
+        // 左下は ⌘Z / ⌘X / ⌘C / ⌘V。範囲選択は左下の Shift を押しながら矢印
 
         CURSOR {
             bindings = <
-&kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(F)                &kp LG(LEFT)  &kp PG_DN  &kp PG_UP  &kp LG(RIGHT)  &kp LC(UP)
-&kp LA(N5)  &kp LA(N6)  &kp LA(N7)  &none       &none                    &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT      &trans
-&trans      &kp LA(N8)  &kp LA(N9)  &none       &none                    &kp LA(LEFT)  &trans     &trans     &kp LA(RIGHT)  &kp DEL
+&none       &none       &none       &none       &none                    &kp LG(LEFT)  &kp PG_DN  &kp PG_UP  &kp LG(RIGHT)  &kp LC(UP)
+&none       &none       &none       &none       &none                    &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT      &trans
+&kp LG(Z)   &kp LG(X)   &kp LG(C)   &kp LG(V)   &none                    &kp LA(LEFT)  &trans     &trans     &kp LA(RIGHT)  &kp DEL
 &trans      &trans      &trans      &trans      &trans  &trans    &trans  &trans                  &trans     &trans         &trans
             >;
         };
@@ -271,17 +257,19 @@
 
         //5
 
-        // スクロール（左親指の Tab を長押し）。右親指でトラボを転がすとスクロール。キーは基本と同じ
+        // AeroSpace（左の Tab を長押し）。それ以外のキーは Option＋そのキー
+        //   左手：ワークスペース。段ごとにモニター（上 1〜4＝メイン＋T 全画面 / 中 5〜7＝サブ / 下 8〜9＝本体）
+        //   右手：ホーム段 H J K L ＝ フォーカス、その下 N M , . ＝ ウィンドウ移動
+        //   ⌥⇧1〜9（ウィンドウをワークスペースへ）は右下の Shift を足す
+        //   Enter の位置 ＝ ⌥Enter（WezTerm フルスクリーン）、BS の位置 ＝ ⌥⌫
 
-        SCROLL {
+        AERO {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans  &trans
+&kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(F)                     &kp LA(Y)      &kp LA(U)      &kp LA(I)      &kp LA(O)      &kp LA(P)
+&kp LA(N5)  &kp LA(N6)  &kp LA(N7)  &kp LA(F)   &kp LA(G)                     &kp LA(H)      &kp LA(J)      &kp LA(K)      &kp LA(L)      &kp LA(SEMI)
+&kp LA(Z)   &kp LA(N8)  &kp LA(N9)  &kp LA(V)   &kp LA(B)                     &kp LS(LA(H))  &kp LS(LA(J))  &kp LS(LA(K))  &kp LS(LA(L))  &kp LA(SLASH)
+&trans      &trans      &trans      &none       &kp LA(RET)  &trans    &kp LA(BSPC)  &trans               &trans         &kp LA(MINUS)  &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         //6

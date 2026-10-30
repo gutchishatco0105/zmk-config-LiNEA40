@@ -15,6 +15,20 @@ parse_config:
     "&lt_th 5 TAB": {t: "⇥", h: "スクロール"}
     "&lt_th 2 BACKSPACE": {t: "⌫", h: "数字記号"}
     "&sands LSHIFT SPACE": {t: "␣", h: "⇧ Shift"}
+    "&lt_th AERO TAB": {t: "⇥ Tab", h: "AeroSpace"}
+    "&kp LSHIFT": "⇧ Shift"
+    "&kp RSHIFT": "⇧ Shift"
+    "&kp MINUS": "-（ー）"
+    "&kp LA(H)": {t: "←", h: "窓を選択"}
+    "&kp LA(J)": {t: "↓", h: "窓を選択"}
+    "&kp LA(K)": {t: "↑", h: "窓を選択"}
+    "&kp LA(L)": {t: "→", h: "窓を選択"}
+    "&kp LS(LA(H))": {t: "←", h: "窓を移動"}
+    "&kp LS(LA(J))": {t: "↓", h: "窓を移動"}
+    "&kp LS(LA(K))": {t: "↑", h: "窓を移動"}
+    "&kp LS(LA(L))": {t: "→", h: "窓を移動"}
+    "&kp LA(RET)": {t: "⌥⏎", h: "WezTerm全画面"}
+    "&kp LA(BSPC)": {t: "⌥⌫", h: "単語削除"}
     "&mo WIRELESS": {t: "無線", h: "押さえる"}
     "&vsc_slow": {t: "遅く", h: "動画 s"}
     "&vsc_fast": {t: "速く", h: "動画 d"}

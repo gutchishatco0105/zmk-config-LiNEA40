@@ -22,8 +22,7 @@ layers:
   - K
   - L
   - ;
-  - t: Z
-    h: ⇧ Shift
+  - Z
   - X
   - C
   - V
@@ -32,30 +31,25 @@ layers:
   - M
   - ','
   - .
-  - t: /
-    h: ⇧ Shift
-  - t: Esc
-    h: ⌃ Ctrl
-  - t: Ctrl+Q
-    h: ⌥ Option
+  - /
+  - ⇧ Shift
+  - t: ⇥ Tab
+    h: AeroSpace
   - t: 英数
     h: ⌘ Cmd
   - t: Enc
     h: エンコーダ
   - t: ⏎
     h: 移動
-  - t: ⇥
-    h: スクロール
+  - t: Esc
+    h: ⌃ Ctrl
   - t: ⌫
     h: 数字記号
-  - t: ␣
-    h: ⇧ Shift
+  - SPACE
   - t: かな
     h: ⌘ Cmd
-  - t: '['
-    h: ⌥ Option
-  - t: ']'
-    h: ⌃ Ctrl
+  - -（ー）
+  - ⇧ Shift
   1 マウス（トラボを動かすと自動）:
   - type: trans
   - type: trans
@@ -102,7 +96,7 @@ layers:
   - type: trans
   - type: trans
   2 数字・記号（⌫ 長押し）:
-  - '-'
+  - -（ー）
   - '7'
   - '8'
   - '9'
@@ -133,7 +127,7 @@ layers:
   - '}'
   - \
   - '`'
-  - type: trans
+  - '|'
   - '='
   - t: ''
     type: enc
@@ -142,19 +136,14 @@ layers:
   - type: trans
   - type: trans
   - type: trans
-  - '|'
-  - '?'
-  3 移動・AeroSpace（⏎ 長押し）:
-  - t: WS1
-    h: ⌥1
-  - t: WS2
-    h: ⌥2
-  - t: WS3
-    h: ⌥3
-  - t: WS4
-    h: ⌥4
-  - t: 全画面
-    h: ⌥F
+  - '['
+  - ']'
+  3 移動（⏎ 長押し・トラボでスクロール）:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - t: 行頭
     h: ⌘←
   - PgDn
@@ -163,12 +152,9 @@ layers:
     h: ⌘→
   - t: 一覧
     h: ⌃↑
-  - t: WS5
-    h: ⌥5
-  - t: WS6
-    h: ⌥6
-  - t: WS7
-    h: ⌥7
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - ←
@@ -176,12 +162,14 @@ layers:
   - ↑
   - →
   - type: trans
-  - type: trans
-  - t: WS8
-    h: ⌥8
-  - t: WS9
-    h: ⌥9
-  - ''
+  - t: ⌘Z
+    h: 戻す
+  - t: ⌘X
+    h: 切取
+  - t: ⌘C
+    h: 複製
+  - t: ⌘V
+    h: 貼付
   - ''
   - t: 単語←
     h: ⌥←
@@ -251,48 +239,69 @@ layers:
     h: 押さえる
   - type: trans
   - type: trans
-  5 スクロール（⇥ 長押し＋トラボ）:
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
+  5 AeroSpace（⇥ 長押し・ほかは ⌥＋キー）:
+  - t: WS1
+    h: ⌥1
+  - t: WS2
+    h: ⌥2
+  - t: WS3
+    h: ⌥3
+  - t: WS4
+    h: ⌥4
+  - t: 全画面
+    h: ⌥F
+  - Alt+Y
+  - Alt+U
+  - Alt+I
+  - Alt+O
+  - Alt+P
+  - t: WS5
+    h: ⌥5
+  - t: WS6
+    h: ⌥6
+  - t: WS7
+    h: ⌥7
+  - t: 全画面
+    h: ⌥F
+  - Alt+G
+  - t: ←
+    h: 窓を選択
+  - t: ↓
+    h: 窓を選択
+  - t: ↑
+    h: 窓を選択
+  - t: →
+    h: 窓を選択
+  - Alt+;
+  - Alt+Z
+  - t: WS8
+    h: ⌥8
+  - t: WS9
+    h: ⌥9
+  - Alt+V
+  - Alt+B
+  - t: ←
+    h: 窓を移動
+  - t: ↓
+    h: 窓を移動
+  - t: ↑
+    h: 窓を移動
+  - t: →
+    h: 窓を移動
+  - Alt+/
   - type: trans
   - type: trans
   - type: trans
   - t: ''
     type: enc
+  - t: ⌥⏎
+    h: WezTerm全画面
+  - type: trans
+  - t: ⌥⌫
+    h: 単語削除
   - type: trans
   - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
-  - type: trans
+  - Alt+-
   - type: trans
   6 無線・システム（⏎＋⌫＋かな）:
   - t: Mac
