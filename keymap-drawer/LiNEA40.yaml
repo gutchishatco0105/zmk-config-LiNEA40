@@ -38,10 +38,10 @@ layers:
     h: AeroSpace
   - t: Enc
     h: エンコーダ
-  - t: Esc
-    h: ⌃ Ctrl
   - t: ␣
     h: 数字記号
+  - t: Esc
+    h: ⌃ Ctrl
   - t: ⌫
     h: 移動
   - ⇧ Shift
