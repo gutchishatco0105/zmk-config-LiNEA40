@@ -66,6 +66,15 @@
 };
 
 / {
+    // Enter（移動）と BS（数字・記号）を両方長押しすると Fn・メディア・動画レイヤー
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        fn_layer {
+            if-layers = <MARK CURSOR>;
+            then-layer = <FUNCTION>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -130,23 +139,27 @@
 
     behaviors {
         // 親指のレイヤーキー：押さえている間に別のキーを押して離したら、時間に関係なくレイヤー扱い
-        // （Space＋S をパッと押しても、スペースが出て動画が止まらないように）
+        // （親指のレイヤーキー＋別のキーをパッと押しても、ちゃんとレイヤーになるように）
+        // トン・ギュー（短く押してすぐ押し直して長押し）なら、BS や Enter を連打
         lt_th: lt_th {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
             bindings = <&mo>, <&kp>;
         };
 
-        // Space 専用：上と同じ判定に加えて、文字を打った直後（0.15秒以内）は必ず普通のスペース
-        lt_spc: lt_spc {
+        // SandS：Space を長押しで Shift。文字を打った直後（0.15秒以内）は必ず普通のスペース
+        // トン・ギューならスペースを連打
+        sands: sands {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
-            bindings = <&mo>, <&kp>;
+            bindings = <&kp>, <&kp>;
         };
 
         // エンコーダで動画の速度：右に回すと速く、左に回すと遅く
@@ -176,9 +189,10 @@
 
         //0 基本（Mac・US配列）
         //  原則：下段の端3つ（修飾キー）は左右両方に置き、組み合わせるキーは反対側の手で押す
+        //  Enter と BS を両方長押し ＝ Fn・メディア・動画（たまに使うもの）
         //  修飾キーは左右対称：外から Ctrl・Option・Cmd ／ Cmd・Option・Ctrl、Shift は Z と /
         //  下段：Esc/Ctrl  Ctrl+Q(Leader)/Option  英数/Cmd  [エンコーダ]  Enter/L3  Tab/L5(スクロール)
-        //      | BS/L2(数字)  Space/L4  [トラボ]  かな/Cmd  [/Option  ]/Ctrl
+        //      | BS/L2(数字)  Space/Shift(SandS)  [トラボ]  かな/Cmd  [/Option  ]/Ctrl
         //  / は US 配列と同じ「. の右」。長押しで右の Shift
 
         default_layer {
@@ -186,7 +200,7 @@
 &kp Q             &kp W              &kp E           &kp R    &kp T                                      &kp Y        &kp U  &kp I                &kp O              &kp P
 &kp A             &kp S              &kp D           &kp F    &kp G                                      &kp H        &kp J  &kp K                &kp L              &kp SEMICOLON
 &mt LSHIFT Z      &kp X              &kp C           &kp V    &kp B                                      &kp N        &kp M  &kp COMMA            &kp DOT            &mt RIGHT_SHIFT SLASH
-&mt LCTRL ESC     &mt LALT LC(Q)     &mt LGUI LANG2  &none    &lt_th 3 ENTER  &lt_th 5 TAB    &lt_th 2 BACKSPACE  &lt_spc 4 SPACE        &mt RGUI LANG1       &mt RALT LBKT      &mt RCTRL RBKT
+&mt LCTRL ESC     &mt LALT LC(Q)     &mt LGUI LANG2  &none    &lt_th 3 ENTER  &lt_th 5 TAB    &lt_th 2 BACKSPACE  &sands LSHIFT SPACE       &mt RGUI LANG1       &mt RALT LBKT      &mt RCTRL RBKT
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -205,19 +219,18 @@
 
         //2
 
-        // 数字・記号（BS を長押し）
-        //   上段：数字（普通のキーボードと同じ並び）
-        //   中段（ホーム）：よく使う記号。括弧は左が開き・右が閉じで左右対称、- と = は人差し指の内側
-        //   下段：Shift＋数字の記号（! の上が 1、@ の上が 2 … と同じ列）と ' "
-        //   左親指：_ と +、左下の端：` と \（使用頻度が低いもの）
-        //   < > : ? は普通のキーボードと同じく Shift（Z 長押し）＋ , . ; /
+        // 数字・記号（BS を長押し）mozumasu さん流
+        //   左手：テンキー型の数字と + - * / .  右手：記号
+        //   左親指の Tab 位置 ＝ _ 、左下の Cmd 位置 ＝ = 、右下 ＝ | ?（右の Cmd は残すので ⌘＋数字が打てる）
+        //   Enter の位置は空けておく（Enter と BS の同時長押しで Fn レイヤーに入るため）
+        //   < > : ? は普通のキーボードと同じく Shift ＋ , . ; /
 
         MARK {
             bindings = <
-&kp N1     &kp N2     &kp N3    &kp N4    &kp N5                         &kp N6     &kp N7     &kp N8    &kp N9    &kp N0
-&kp TILDE  &kp LBRC   &kp LBKT  &kp LPAR  &kp MINUS                      &kp EQUAL  &kp RPAR   &kp RBKT  &kp RBRC  &kp PIPE
-&kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT                      &kp CARET  &kp AMPS   &kp STAR  &kp SQT   &kp DQT
-&kp GRAVE  &kp BSLH   &trans    &trans    &kp UNDER  &kp PLUS    &trans  &trans                &trans    &trans    &kp QMARK
+&kp MINUS  &kp N7     &kp N8     &kp N9    &kp PLUS                     &kp CARET  &kp AMPS   &kp TILDE  &kp LPAR  &kp RPAR
+&kp SLASH  &kp N4     &kp N5     &kp N6    &kp STAR                     &kp EXCL   &kp AT     &kp HASH   &kp DLLR  &kp PRCNT
+&kp N0     &kp N1     &kp N2     &kp N3    &kp DOT                      &kp SQT    &kp DQT    &kp LBRC   &kp RBRC  &kp BSLH
+&kp GRAVE  &trans     &kp EQUAL  &trans    &trans     &kp UNDER   &trans  &trans               &trans     &kp PIPE  &kp QMARK
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -241,8 +254,8 @@
 
         //4
 
-        // ファンクション・メディア（Space を長押し）
-        // 左手の S / D / F ＝ 動画の 遅く / 速く / 全画面（いつもの位置のまま）
+        // ファンクション・メディア・動画（Enter と BS を両方長押し。たまにしか使わないものをここに）
+        // 左手の S / D / F ＝ 動画の 遅く / 速く / 全画面
         // エンコーダ ＝ 動画の速度。かな（右の Cmd）の位置を押さえると無線・システムレイヤー
 
         FUNCTION {
@@ -273,7 +286,7 @@
 
         //6
 
-        // 無線・システム（Space を長押ししたまま かな の位置を押さえる）
+        // 無線・システム（Enter と BS を長押ししたまま かな の位置を押さえる）
         // 上段：プロファイル 0＝Mac、1＝iPad … / 左下：書き込みモード、Studioロック解除
 
         WIRELESS {
