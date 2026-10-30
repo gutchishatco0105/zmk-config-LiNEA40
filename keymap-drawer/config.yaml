@@ -33,6 +33,13 @@ parse_config:
     "&kp LANG1": "かな"
     "&kp LGUI": "⌘ Cmd"
     "&kp RGUI": "⌘ Cmd"
+    "&lt_spc MARK SPACE": {t: "␣", h: "数字記号"}
+    "&lt_th CURSOR BACKSPACE": {t: "⌫", h: "移動"}
+    "&lt_spc 2 SPACE": {t: "␣", h: "数字記号"}
+    "&lt_th 3 BACKSPACE": {t: "⌫", h: "移動"}
+    "&kp RET": "⏎ return"
+    "&kp SQT": "'"
+    "&kp LALT": "⌥ Option"
     "&mo WIRELESS": {t: "無線", h: "押さえる"}
     "&vsc_slow": {t: "遅く", h: "動画 s"}
     "&vsc_fast": {t: "速く", h: "動画 d"}

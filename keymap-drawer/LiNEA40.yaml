@@ -32,22 +32,22 @@ layers:
   - ','
   - .
   - /
-  - ⇧ Shift
+  - ⌘ Cmd
+  - ⌥ Opt
   - t: ⇥ Tab
     h: AeroSpace
-  - ⌘ Cmd
   - t: Enc
     h: エンコーダ
-  - t: ⏎
-    h: 移動
   - t: Esc
     h: ⌃ Ctrl
-  - t: ⌫
+  - t: ␣
     h: 数字記号
-  - SPACE
-  - ⌘ Cmd
-  - -（ー）
+  - t: ⌫
+    h: 移動
   - ⇧ Shift
+  - ⏎ return
+  - ''''
+  - -（ー）
   1 マウス（トラボを動かすと自動）:
   - type: trans
   - type: trans
@@ -93,50 +93,50 @@ layers:
   - type: trans
   - type: trans
   - type: trans
-  2 数字・記号（⌫ 長押し）:
-  - -（ー）
+  2 数字・記号（␣ 長押し・トラボでスクロール）:
+  - ^
   - '7'
   - '8'
   - '9'
   - +
-  - ^
-  - '&'
-  - '~'
-  - (
-  - )
-  - /
+  - '!'
+  - '['
+  - '"'
+  - ']'
+  - '@'
+  - '%'
   - '4'
   - '5'
   - '6'
   - '*'
-  - '!'
-  - '@'
   - '#'
+  - (
+  - '='
+  - )
   - $
-  - '%'
   - '0'
   - '1'
   - '2'
   - '3'
   - .
-  - ''''
-  - '"'
+  - '~'
   - '{'
+  - _
   - '}'
-  - \
-  - '`'
   - '|'
-  - '='
+  - type: trans
+  - type: trans
+  - type: trans
   - t: ''
     type: enc
   - type: trans
-  - _
   - type: trans
   - type: trans
+  - '`'
+  - '&'
   - type: trans
-  - '['
-  - ']'
-  3 移動（⏎ 長押し・トラボでスクロール）:
+  - \
+  3 移動（⌫ 長押し）:
   - ''
   - ''
   - ''
@@ -150,10 +150,10 @@ layers:
     h: ⌘→
   - t: 一覧
     h: ⌃↑
-  - ''
-  - ''
-  - ''
-  - ''
+  - ⌃ Ctrl
+  - ⌥ Opt
+  - ⇧ Shift
+  - ⌘ Cmd
   - ''
   - ←
   - ↓
@@ -188,7 +188,7 @@ layers:
   - type: trans
   - type: trans
   - type: trans
-  4 Fn・メディア・動画（⏎＋⌫ を両方長押し）:
+  4 Fn・メディア・動画（␣＋⌫ を両方長押し）:
   - F1
   - F2
   - F3
@@ -292,16 +292,16 @@ layers:
   - type: trans
   - t: ''
     type: enc
-  - t: ⌥⏎
-    h: WezTerm全画面
+  - type: trans
   - type: trans
   - t: ⌥⌫
     h: 単語削除
   - type: trans
+  - t: ⌥⏎
+    h: WezTerm全画面
   - type: trans
-  - Alt+-
   - type: trans
-  6 無線・システム（⏎＋⌫＋右Cmd）:
+  6 無線・システム（␣＋⌫＋return）:
   - t: Mac
     h: BT0
   - t: iPad
