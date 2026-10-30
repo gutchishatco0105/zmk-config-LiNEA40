@@ -238,14 +238,13 @@ layers:
   - type: trans
   - type: trans
   5 AeroSpace（⇥ 長押し・ほかは ⌥＋キー）:
-  - t: WS1
-    h: ⌥1
-  - t: WS2
-    h: ⌥2
-  - t: WS3
-    h: ⌥3
-  - t: WS4
-    h: ⌥4
+  - Alt+Q
+  - t: WS7
+    h: ⌥7
+  - t: WS8
+    h: ⌥8
+  - t: WS9
+    h: ⌥9
   - t: 全画面
     h: ⌥F
   - Alt+Y
@@ -253,14 +252,13 @@ layers:
   - Alt+I
   - Alt+O
   - Alt+P
+  - Alt+A
+  - t: WS4
+    h: ⌥4
   - t: WS5
     h: ⌥5
   - t: WS6
     h: ⌥6
-  - t: WS7
-    h: ⌥7
-  - t: 全画面
-    h: ⌥F
   - Alt+G
   - t: ←
     h: 窓を選択
@@ -272,11 +270,12 @@ layers:
     h: 窓を選択
   - Alt+;
   - Alt+Z
-  - t: WS8
-    h: ⌥8
-  - t: WS9
-    h: ⌥9
-  - Alt+V
+  - t: WS1
+    h: ⌥1
+  - t: WS2
+    h: ⌥2
+  - t: WS3
+    h: ⌥3
   - Alt+B
   - t: ←
     h: 窓を移動

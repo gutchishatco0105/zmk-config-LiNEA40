@@ -286,16 +286,16 @@
         //5
 
         // AeroSpace（左の Tab を長押し）。それ以外のキーは Option＋そのキー
-        //   左手：ワークスペース。段ごとにモニター（上 1〜4＝メイン＋T 全画面 / 中 5〜7＝サブ / 下 8〜9＝本体）
+        //   左手：ワークスペース。数字・記号レイヤーのテンキーと同じ並び（7 8 9 / 4 5 6 / 1 2 3）、T ＝ 全画面
         //   右手：ホーム段 H J K L ＝ フォーカス、その下 N M , . ＝ ウィンドウ移動
         //   ⌥⇧1〜9（ウィンドウをワークスペースへ）は右下の Shift を足す
         //   return の位置 ＝ ⌥Enter（WezTerm フルスクリーン）、BS の位置 ＝ ⌥⌫
 
         AERO {
             bindings = <
-&kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(F)                     &kp LA(Y)      &kp LA(U)      &kp LA(I)      &kp LA(O)      &kp LA(P)
-&kp LA(N5)  &kp LA(N6)  &kp LA(N7)  &kp LA(F)   &kp LA(G)                     &kp LA(H)      &kp LA(J)      &kp LA(K)      &kp LA(L)      &kp LA(SEMI)
-&kp LA(Z)   &kp LA(N8)  &kp LA(N9)  &kp LA(V)   &kp LA(B)                     &kp LS(LA(H))  &kp LS(LA(J))  &kp LS(LA(K))  &kp LS(LA(L))  &kp LA(SLASH)
+&kp LA(Q)   &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(F)                     &kp LA(Y)      &kp LA(U)      &kp LA(I)      &kp LA(O)      &kp LA(P)
+&kp LA(A)   &kp LA(N4)  &kp LA(N5)  &kp LA(N6)  &kp LA(G)                     &kp LA(H)      &kp LA(J)      &kp LA(K)      &kp LA(L)      &kp LA(SEMI)
+&kp LA(Z)   &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(B)                     &kp LS(LA(H))  &kp LS(LA(J))  &kp LS(LA(K))  &kp LS(LA(L))  &kp LA(SLASH)
 &trans      &trans      &trans      &none       &trans       &trans    &kp LA(BSPC)  &trans               &kp LA(RET)    &trans         &trans
             >;
         };

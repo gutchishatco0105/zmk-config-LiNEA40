@@ -959,23 +959,22 @@ rect.enc { fill: #e4e2da; }
 <g transform="translate(0, 56)">
 <g transform="translate(30, 30)" class="key keypos-0">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">WS1</text>
-<text x="0" y="26" class="key hold">⌥1</text>
+<text x="0" y="0" class="key tap">Alt+Q</text>
 </g>
 <g transform="translate(90, 30)" class="key keypos-1">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">WS2</text>
-<text x="0" y="26" class="key hold">⌥2</text>
+<text x="0" y="0" class="key tap">WS7</text>
+<text x="0" y="26" class="key hold">⌥7</text>
 </g>
 <g transform="translate(150, 30)" class="key keypos-2">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">WS3</text>
-<text x="0" y="26" class="key hold">⌥3</text>
+<text x="0" y="0" class="key tap">WS8</text>
+<text x="0" y="26" class="key hold">⌥8</text>
 </g>
 <g transform="translate(210, 30)" class="key keypos-3">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">WS4</text>
-<text x="0" y="26" class="key hold">⌥4</text>
+<text x="0" y="0" class="key tap">WS9</text>
+<text x="0" y="26" class="key hold">⌥9</text>
 </g>
 <g transform="translate(270, 30)" class="key keypos-4">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -1004,23 +1003,22 @@ rect.enc { fill: #e4e2da; }
 </g>
 <g transform="translate(30, 90)" class="key keypos-10">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">WS5</text>
-<text x="0" y="26" class="key hold">⌥5</text>
+<text x="0" y="0" class="key tap">Alt+A</text>
 </g>
 <g transform="translate(90, 90)" class="key keypos-11">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">WS6</text>
-<text x="0" y="26" class="key hold">⌥6</text>
+<text x="0" y="0" class="key tap">WS4</text>
+<text x="0" y="26" class="key hold">⌥4</text>
 </g>
 <g transform="translate(150, 90)" class="key keypos-12">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">WS7</text>
-<text x="0" y="26" class="key hold">⌥7</text>
+<text x="0" y="0" class="key tap">WS5</text>
+<text x="0" y="26" class="key hold">⌥5</text>
 </g>
 <g transform="translate(210, 90)" class="key keypos-13">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">全画面</text>
-<text x="0" y="26" class="key hold">⌥F</text>
+<text x="0" y="0" class="key tap">WS6</text>
+<text x="0" y="26" class="key hold">⌥6</text>
 </g>
 <g transform="translate(270, 90)" class="key keypos-14">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -1056,17 +1054,18 @@ rect.enc { fill: #e4e2da; }
 </g>
 <g transform="translate(90, 150)" class="key keypos-21">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">WS8</text>
-<text x="0" y="26" class="key hold">⌥8</text>
+<text x="0" y="0" class="key tap">WS1</text>
+<text x="0" y="26" class="key hold">⌥1</text>
 </g>
 <g transform="translate(150, 150)" class="key keypos-22">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">WS9</text>
-<text x="0" y="26" class="key hold">⌥9</text>
+<text x="0" y="0" class="key tap">WS2</text>
+<text x="0" y="26" class="key hold">⌥2</text>
 </g>
 <g transform="translate(210, 150)" class="key keypos-23">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">Alt+V</text>
+<text x="0" y="0" class="key tap">WS3</text>
+<text x="0" y="26" class="key hold">⌥3</text>
 </g>
 <g transform="translate(270, 150)" class="key keypos-24">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
