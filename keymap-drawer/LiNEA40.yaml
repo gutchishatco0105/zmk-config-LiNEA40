@@ -1,7 +1,7 @@
 layout:
   zmk_keyboard: LiNEA40
 layers:
-  0 基本（F＋G＝英数、H＋J＝かな）:
+  基本:
   - Q
   - W
   - E
@@ -35,20 +35,21 @@ layers:
   - ⌘ Cmd
   - ⌥ Opt
   - t: ⇥ Tab
-    h: AeroSpace
+    h: ⌥＋数字
   - t: Enc
-    h: エンコーダ
-  - t: ␣
+    type: enc
+  - t: ⇧ Shift
     h: 数字記号
   - t: Esc
     h: ⌃ Ctrl
   - t: ⌫
     h: 移動
-  - ⇧ Shift
+  - ␣ Space
   - ⏎ return
-  - ''''
+  - t: '[  ]'
+    h: 「」⇧で」
   - -（ー）
-  1 マウス（トラボを動かすと自動）:
+  マウス:
   - type: trans
   - type: trans
   - type: trans
@@ -93,37 +94,37 @@ layers:
   - type: trans
   - type: trans
   - type: trans
-  2 数字・記号（␣ 長押し・トラボでスクロール）:
-  - ^
+  数字記号:
+  - '`'
   - '7'
   - '8'
   - '9'
-  - +
+  - $
   - '!'
-  - '['
-  - '"'
-  - ']'
+  - '&'
+  - (
+  - )
   - '@'
-  - '%'
+  - ^
   - '4'
   - '5'
   - '6'
   - '*'
   - '#'
-  - (
   - '='
-  - )
-  - $
+  - '"'
+  - ''''
+  - '%'
   - '0'
   - '1'
   - '2'
   - '3'
-  - .
-  - '~'
-  - '{'
-  - _
-  - '}'
+  - +
   - '|'
+  - '`'
+  - '{'
+  - '}'
+  - \
   - type: trans
   - type: trans
   - type: trans
@@ -132,24 +133,21 @@ layers:
   - type: trans
   - type: trans
   - type: trans
-  - '`'
-  - '&'
+  - '~'
   - type: trans
-  - \
-  3 移動（⌫ 長押し）:
+  - type: trans
+  - -（ー）
+  移動:
   - ''
   - ''
   - ''
   - ''
   - ''
-  - t: 行頭
-    h: ⌘←
-  - PgDn
-  - PgUp
-  - t: 行末
-    h: ⌘→
-  - t: 一覧
-    h: ⌃↑
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - ⌃ Ctrl
   - ⌥ Opt
   - ⇧ Shift
@@ -159,22 +157,16 @@ layers:
   - ↓
   - ↑
   - →
-  - type: trans
-  - t: ⌘Z
-    h: 戻す
-  - t: ⌘X
-    h: 切取
-  - t: ⌘C
-    h: 複製
-  - t: ⌘V
-    h: 貼付
   - ''
-  - t: 単語←
-    h: ⌥←
-  - type: trans
-  - type: trans
-  - t: 単語→
-    h: ⌥→
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - Del
   - type: trans
   - type: trans
@@ -188,42 +180,37 @@ layers:
   - type: trans
   - type: trans
   - type: trans
-  4 Fn・メディア・動画（␣＋⌫ を両方長押し）:
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
+  ⌥（Tab長押し）:
   - type: trans
-  - t: 遅く
-    h: 動画 s
-  - t: 速く
-    h: 動画 d
-  - t: 全画面
-    h: 動画 f
-  - type: trans
-  - 前の曲
-  - 再生
-  - 次の曲
+  - '7'
+  - '8'
+  - '9'
   - type: trans
   - type: trans
-  - F11
-  - F12
-  - 明るさ−
-  - 明るさ+
   - type: trans
-  - ミュート
-  - 音量−
-  - 音量+
-  - t: 画面撮影
-    h: ⇧⌘3
-  - t: 範囲撮影
-    h: ⇧⌘4
+  - type: trans
+  - type: trans
+  - type: trans
+  - type: trans
+  - '4'
+  - '5'
+  - '6'
+  - type: trans
+  - type: trans
+  - type: trans
+  - type: trans
+  - type: trans
+  - type: trans
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - type: trans
+  - type: trans
+  - type: trans
+  - type: trans
+  - type: trans
+  - type: trans
   - type: trans
   - type: trans
   - type: trans
@@ -233,74 +220,10 @@ layers:
   - type: trans
   - type: trans
   - type: trans
-  - t: 無線
-    h: 押さえる
-  - type: trans
-  - type: trans
-  5 AeroSpace（⇥ 長押し・ほかは ⌥＋キー）:
-  - Alt+Q
-  - t: WS7
-    h: ⌥7
-  - t: WS8
-    h: ⌥8
-  - t: WS9
-    h: ⌥9
-  - t: 全画面
-    h: ⌥F
-  - Alt+Y
-  - Alt+U
-  - Alt+I
-  - Alt+O
-  - Alt+P
-  - Alt+A
-  - t: WS4
-    h: ⌥4
-  - t: WS5
-    h: ⌥5
-  - t: WS6
-    h: ⌥6
-  - Alt+G
-  - t: ←
-    h: 窓を選択
-  - t: ↓
-    h: 窓を選択
-  - t: ↑
-    h: 窓を選択
-  - t: →
-    h: 窓を選択
-  - Alt+;
-  - Alt+Z
-  - t: WS1
-    h: ⌥1
-  - t: WS2
-    h: ⌥2
-  - t: WS3
-    h: ⌥3
-  - Alt+B
-  - t: ←
-    h: 窓を移動
-  - t: ↓
-    h: 窓を移動
-  - t: ↑
-    h: 窓を移動
-  - t: →
-    h: 窓を移動
-  - Alt+/
   - type: trans
   - type: trans
   - type: trans
-  - t: ''
-    type: enc
-  - type: trans
-  - type: trans
-  - t: ⌥⌫
-    h: 単語削除
-  - type: trans
-  - t: ⌥⏎
-    h: WezTerm全画面
-  - type: trans
-  - type: trans
-  6 無線・システム（␣＋⌫＋return）:
+  無線:
   - t: Mac
     h: BT0
   - t: iPad
@@ -355,19 +278,19 @@ combos:
   - 14
   k: 英数
   l:
-  - 0 基本（F＋G＝英数、H＋J＝かな）
+  - 基本
 - p:
   - 15
   - 16
   k: かな
   l:
-  - 0 基本（F＋G＝英数、H＋J＝かな）
+  - 基本
 - p:
   - 17
   - 16
   k: 中
   l:
-  - 1 マウス（トラボを動かすと自動）
+  - マウス
 - p:
   - 18
   - 17
@@ -375,16 +298,16 @@ combos:
     t: 右
     h: クリック
   l:
-  - 1 マウス（トラボを動かすと自動）
+  - マウス
 - p:
   - 27
   - 28
   k: 戻る
   l:
-  - 1 マウス（トラボを動かすと自動）
+  - マウス
 - p:
   - 26
   - 27
   k: 進む
   l:
-  - 1 マウス（トラボを動かすと自動）
+  - マウス

@@ -1,6 +1,41 @@
 parse_config:
   trans_legend: {t: "", type: trans}
   raw_binding_map:
+    "&kagi": {t: "[  ]", h: "「」⇧で」"}
+    "&kp SQT": "'"
+    "&kp MINUS": "-"
+    "&kp UNDER": "_"
+    "&esc_ctrl LCTRL 0": {t: "Esc", h: "⌃ Ctrl"}
+    "&kp GRAVE": "`"
+    "&sft_mark MARK LSHIFT": {t: "⇧ Shift", h: "数字記号"}
+    "&kp SPACE": "␣ Space"
+    "&tab_opt 0 TAB": {t: "⇥ Tab", h: "⌥＋数字"}
+    "&kp C_MUTE": {t: "ミュート", h: "押し込み"}
+    "&mt LCTRL ESC": {t: "Esc", h: "⌃ Ctrl"}
+    "&kp LA(Q)": "⌥Q"
+    "&kp LA(Y)": "⌥Y"
+    "&kp LA(U)": "⌥U"
+    "&kp LA(I)": "⌥I"
+    "&kp LA(O)": "⌥O"
+    "&kp LA(P)": "⌥P"
+    "&kp LA(A)": "⌥A"
+    "&kp LA(G)": "⌥G"
+    "&kp LA(H)": "⌥H"
+    "&kp LA(J)": "⌥J"
+    "&kp LA(K)": "⌥K"
+    "&kp LA(L)": "⌥L"
+    "&kp LA(SEMI)": "⌥;"
+    "&kp LA(B)": "⌥B"
+    "&kp LA(N)": "⌥N"
+    "&kp LA(M)": "⌥M"
+    "&kp LA(COMMA)": "⌥,"
+    "&kp LA(DOT)": "⌥."
+    "&kp LA(SLASH)": "⌥/"
+    "&sk RSHIFT": {t: "⇧ Shift", h: "次の1字"}
+    "&kp HOME": "Home"
+    "&kp END": "End"
+    "&kp LA(T)": "⌥T"
+    "&kp LA(N0)": "⌥0"
     "&none": ""
     "&mt LALT LC(Q)": {t: "Ctrl+Q", h: "⌥ Option"}
     "&mt LGUI LANG2": {t: "英数", h: "⌘ Cmd"}
@@ -15,20 +50,12 @@ parse_config:
     "&lt_th 5 TAB": {t: "⇥", h: "スクロール"}
     "&lt_th 2 BACKSPACE": {t: "⌫", h: "数字記号"}
     "&sands LSHIFT SPACE": {t: "␣", h: "⇧ Shift"}
-    "&lt_th AERO TAB": {t: "⇥ Tab", h: "AeroSpace"}
+    "&lt_th AERO TAB": {t: "⇥ Tab", h: "⌥レイヤー"}
     "&kp LSHIFT": "⇧ Shift"
     "&kp RSHIFT": "⇧ Shift"
     "&kp MINUS": "-（ー）"
-    "&kp LA(H)": {t: "←", h: "窓を選択"}
-    "&kp LA(J)": {t: "↓", h: "窓を選択"}
-    "&kp LA(K)": {t: "↑", h: "窓を選択"}
-    "&kp LA(L)": {t: "→", h: "窓を選択"}
-    "&kp LS(LA(H))": {t: "←", h: "窓を移動"}
-    "&kp LS(LA(J))": {t: "↓", h: "窓を移動"}
-    "&kp LS(LA(K))": {t: "↑", h: "窓を移動"}
-    "&kp LS(LA(L))": {t: "→", h: "窓を移動"}
-    "&kp LA(RET)": {t: "⌥⏎", h: "WezTerm全画面"}
-    "&kp LA(BSPC)": {t: "⌥⌫", h: "単語削除"}
+    "&kp LA(RET)": "⌥⏎"
+    "&kp LA(BSPC)": "⌥⌫"
     "&kp LANG2": "英数"
     "&kp LANG1": "かな"
     "&kp LGUI": "⌘ Cmd"
@@ -45,16 +72,16 @@ parse_config:
     "&vsc_slow": {t: "遅く", h: "動画 s"}
     "&vsc_fast": {t: "速く", h: "動画 d"}
     "&vsc_full": {t: "全画面", h: "動画 f"}
-    "&kp LA(N1)": {t: "WS1", h: "⌥1"}
-    "&kp LA(N2)": {t: "WS2", h: "⌥2"}
-    "&kp LA(N3)": {t: "WS3", h: "⌥3"}
-    "&kp LA(N4)": {t: "WS4", h: "⌥4"}
-    "&kp LA(N5)": {t: "WS5", h: "⌥5"}
-    "&kp LA(N6)": {t: "WS6", h: "⌥6"}
-    "&kp LA(N7)": {t: "WS7", h: "⌥7"}
-    "&kp LA(N8)": {t: "WS8", h: "⌥8"}
-    "&kp LA(N9)": {t: "WS9", h: "⌥9"}
-    "&kp LA(F)": {t: "全画面", h: "⌥F"}
+    "&kp LA(N1)": "⌥1"
+    "&kp LA(N2)": "⌥2"
+    "&kp LA(N3)": "⌥3"
+    "&kp LA(N4)": "⌥4"
+    "&kp LA(N5)": "⌥5"
+    "&kp LA(N6)": "⌥6"
+    "&kp LA(N7)": "⌥7"
+    "&kp LA(N8)": "⌥8"
+    "&kp LA(N9)": "⌥9"
+    "&kp LA(F)": "⌥F"
     "&kp LG(LEFT)": {t: "行頭", h: "⌘←"}
     "&kp LG(RIGHT)": {t: "行末", h: "⌘→"}
     "&kp LC(UP)": {t: "一覧", h: "⌃↑"}
