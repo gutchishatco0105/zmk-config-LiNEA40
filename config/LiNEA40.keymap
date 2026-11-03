@@ -229,7 +229,7 @@
 &kp LGUI          &kp RALT           &tab_opt 0 TAB  &none    &sft_mark MARK LSHIFT  &esc_ctrl LCTRL 0  &lt_th CURSOR BACKSPACE  &spc_cmd LGUI SPACE   &kp RET              &kagi              &kp MINUS
             >;
 
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>; // スクロールの向きは SlimBlade に合わせる
         };
 
         //1
