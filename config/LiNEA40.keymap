@@ -147,12 +147,15 @@
         };
 
         // Tab：短く押すと Tab、長押しで ⌥（左手は数字）
+        // 押さえたまま別のキーを押した瞬間に ⌥（ワークスペース切り替えを速く）
+        // 文字を打った直後（0.15秒以内）は必ず Tab（補完のあとにすぐ打っても ⌥ に化けないように）
         tab_opt: tab_opt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
             bindings = <&opt_num>, <&kp>;
         };
 
