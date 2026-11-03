@@ -1,6 +1,7 @@
 parse_config:
   trans_legend: {t: "", type: trans}
   raw_binding_map:
+    "&spc_cmd LGUI SPACE": {t: "␣ Space", h: "⌘ Cmd"}
     "&kagi": {t: "[  ]", h: "「」⇧で」"}
     "&kp SQT": "'"
     "&kp MINUS": "-"

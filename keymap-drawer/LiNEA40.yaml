@@ -44,7 +44,8 @@ layers:
     h: ⌃ Ctrl
   - t: ⌫
     h: 移動
-  - ␣ Space
+  - t: ␣ Space
+    h: ⌘ Cmd
   - ⏎ return
   - t: '[  ]'
     h: 「」⇧で」
