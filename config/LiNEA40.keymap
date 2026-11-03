@@ -185,14 +185,14 @@
         };
 
         // 左親指：短く押すとワンショット Shift、長押しで数字・記号レイヤー
-        // 文字を打った直後（0.15秒以内）は必ず Shift。長押ししても何も押さずに離したら Shift（retro-tap）
+        // 文字を打った直後（0.15秒以内）は必ず Shift。長押しして何も押さずに離したら何もしない
+        // （スクロールや音量のあとに Shift が残らないように）
         sft_mark: sft_mark {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             require-prior-idle-ms = <150>;
-            retro-tap;
             hold-while-undecided; // 押した瞬間から数字記号レイヤーを仮に有効に（エンコーダの音量がすぐ効くように）
             bindings = <&mo>, <&sk>;
         };
