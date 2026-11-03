@@ -168,6 +168,7 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
+            hold-while-undecided; // 押した瞬間からレイヤーを仮に有効に（エンコーダの明るさがすぐ効くように）
             bindings = <&mo>, <&kp>;
         };
 
@@ -192,6 +193,7 @@
             tapping-term-ms = <200>;
             require-prior-idle-ms = <150>;
             retro-tap;
+            hold-while-undecided; // 押した瞬間から数字記号レイヤーを仮に有効に（エンコーダの音量がすぐ効くように）
             bindings = <&mo>, <&sk>;
         };
 
