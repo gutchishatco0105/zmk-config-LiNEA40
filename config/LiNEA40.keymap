@@ -216,7 +216,7 @@
         compatible = "zmk,keymap";
 
         //0 基本（Mac・US配列）：基本レイヤーはほぼ文字だけ。キーボードは「キー」と「修飾キー」だけを出す
-        //  下段：Cmd  Option  Tab/⌥＋数字  [エンコーダ]  Shift(ワンショット)/数字記号（左親指）  Esc/Ctrl（左親指）
+        //  下段：Cmd  右Option（Aqua Voice の起動キー）  Tab/左⌥＋数字  [エンコーダ]  Shift(ワンショット)/数字記号（左親指）  Esc/Ctrl（左親指）
         //      | BS/移動（右親指）  Space/⌘（右親指）  [トラボ]  return（右親指）  [ ](「」)  -（ー）
         //  英数 ＝ F＋G 同時押し、かな ＝ H＋J 同時押し
         //  左親指の長押しと BS の長押しを両方 ＝ 無線レイヤー
@@ -226,7 +226,7 @@
 &kp Q             &kp W              &kp E           &kp R    &kp T                                      &kp Y        &kp U  &kp I                &kp O              &kp P
 &kp A             &kp S              &kp D           &kp F    &kp G                                      &kp H        &kp J  &kp K                &kp L              &kp SEMICOLON
 &kp Z             &kp X              &kp C           &kp V    &kp B                                      &kp N        &kp M  &kp COMMA            &kp DOT            &kp SLASH
-&kp LGUI          &kp LALT           &tab_opt 0 TAB  &none    &sft_mark MARK LSHIFT  &esc_ctrl LCTRL 0  &lt_th CURSOR BACKSPACE  &spc_cmd LGUI SPACE   &kp RET              &kagi              &kp MINUS
+&kp LGUI          &kp RALT           &tab_opt 0 TAB  &none    &sft_mark MARK LSHIFT  &esc_ctrl LCTRL 0  &lt_th CURSOR BACKSPACE  &spc_cmd LGUI SPACE   &kp RET              &kagi              &kp MINUS
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;

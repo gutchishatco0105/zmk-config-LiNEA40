@@ -259,8 +259,9 @@ rect.enc { fill: #e4e2da; }
 <g transform="translate(90, 210)" class="key keypos-31">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">⌥</tspan><tspan x="0" dy="1.2em">Opt</tspan>
+<tspan x="0" dy="-0.9em">⌥</tspan><tspan x="0" dy="1.2em">右Opt</tspan>
 </text>
+<text x="0" y="26" class="key hold"><tspan style="font-size: 70%">Aqua Voice</tspan></text>
 </g>
 <g transform="translate(150, 210)" class="key keypos-32">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>

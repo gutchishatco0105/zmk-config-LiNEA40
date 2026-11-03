@@ -33,7 +33,8 @@ layers:
   - .
   - /
   - ⌘ Cmd
-  - ⌥ Opt
+  - t: ⌥ 右Opt
+    h: Aqua Voice
   - t: ⇥ Tab
     h: ⌥＋数字
   - t: Enc
