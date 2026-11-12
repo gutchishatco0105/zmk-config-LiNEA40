@@ -81,6 +81,16 @@
             require-prior-idle-ms = <150>;
         };
 
+        // Aqua Voice の起動：右下の2つ（「」キー と -）を同時押しで F18
+        // F18 はどのアプリも使っていないキーなので干渉しない（Aqua Voice の起動キーに F18 を登録）
+        AquaVoice {
+            bindings = <&kp F18>;
+            key-positions = <39 40>;
+            layers = <0>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
+        };
+
         // Windows用だった S+D（全角/半角）と U+I（Insert）、
         // 英文の「io」で誤爆する I+O（Delete）は削除。
         // クリック系の同時押しは、Vimium の j/k などで誤爆しないよう
@@ -216,9 +226,9 @@
         compatible = "zmk,keymap";
 
         //0 基本（Mac・US配列）：基本レイヤーはほぼ文字だけ。キーボードは「キー」と「修飾キー」だけを出す
-        //  下段：Cmd  右Option（Aqua Voice の起動キー）  Tab/左⌥＋数字  [エンコーダ]  Shift(ワンショット)/数字記号（左親指）  Esc/Ctrl（左親指）
+        //  下段：Cmd  Option  Tab/⌥＋数字  [エンコーダ]  Shift(ワンショット)/数字記号（左親指）  Esc/Ctrl（左親指）
         //      | BS/移動（右親指）  Space/⌘（右親指）  [トラボ]  return（右親指）  [ ](「」)  -（ー）
-        //  英数 ＝ F＋G 同時押し、かな ＝ H＋J 同時押し
+        //  英数 ＝ F＋G 同時押し、かな ＝ H＋J 同時押し、Aqua Voice（F18）＝ 右下の2つを同時押し
         //  左親指の長押しと BS の長押しを両方 ＝ 無線レイヤー
 
         default_layer {
@@ -226,7 +236,7 @@
 &kp Q             &kp W              &kp E           &kp R    &kp T                                      &kp Y        &kp U  &kp I                &kp O              &kp P
 &kp A             &kp S              &kp D           &kp F    &kp G                                      &kp H        &kp J  &kp K                &kp L              &kp SEMICOLON
 &kp Z             &kp X              &kp C           &kp V    &kp B                                      &kp N        &kp M  &kp COMMA            &kp DOT            &kp SLASH
-&kp LGUI          &kp RALT           &tab_opt 0 TAB  &none    &sft_mark MARK LSHIFT  &esc_ctrl LCTRL 0  &lt_th CURSOR BACKSPACE  &spc_cmd LGUI SPACE   &kp RET              &kagi              &kp MINUS
+&kp LGUI          &kp LALT           &tab_opt 0 TAB  &none    &sft_mark MARK LSHIFT  &esc_ctrl LCTRL 0  &lt_th CURSOR BACKSPACE  &spc_cmd LGUI SPACE   &kp RET              &kagi              &kp MINUS
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>; // スクロールの向きは SlimBlade に合わせる

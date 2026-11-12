@@ -33,8 +33,7 @@ layers:
   - .
   - /
   - ⌘ Cmd
-  - t: ⌥ 右Opt
-    h: Aqua Voice
+  - ⌥ Opt
   - t: ⇥ Tab
     h: ⌥＋数字
   - t: Enc
@@ -285,6 +284,12 @@ combos:
   - 15
   - 16
   k: かな
+  l:
+  - 基本
+- p:
+  - 39
+  - 40
+  k: Aqua
   l:
   - 基本
 - p:

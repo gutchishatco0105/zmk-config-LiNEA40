@@ -259,9 +259,8 @@ rect.enc { fill: #e4e2da; }
 <g transform="translate(90, 210)" class="key keypos-31">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.9em">⌥</tspan><tspan x="0" dy="1.2em">右Opt</tspan>
+<tspan x="0" dy="-0.6em">⌥</tspan><tspan x="0" dy="1.2em">Opt</tspan>
 </text>
-<text x="0" y="26" class="key hold"><tspan style="font-size: 70%">Aqua Voice</tspan></text>
 </g>
 <g transform="translate(150, 210)" class="key keypos-32">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -322,6 +321,10 @@ rect.enc { fill: #e4e2da; }
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="525" y="78" width="30" height="24" class="combo"/>
 <text x="540" y="90" class="combo tap">かな</text>
+</g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="705" y="198" width="30" height="24" class="combo"/>
+<text x="720" y="210" class="combo tap">Aqua</text>
 </g>
 </g>
 </g>
