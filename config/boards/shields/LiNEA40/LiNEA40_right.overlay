@@ -57,7 +57,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //MOT-D6
-        automouse-layer = <1>;
+        automouse-layer = <0>; // 自動マウスレイヤーはキーマップ側（zip_temp_layer）で行う
         snipe-layers = <3>;
         scroll-layers = <2>;
         //scroll-layers = <4 5 6>;

@@ -22,7 +22,8 @@ layers:
   - K
   - L
   - ;
-  - Z
+  - t: Z
+    h: ⇧ Shift
   - X
   - C
   - V
