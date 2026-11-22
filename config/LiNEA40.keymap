@@ -188,7 +188,6 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
-            hold-while-undecided; // 押した瞬間からレイヤーを仮に有効に（エンコーダの明るさがすぐ効くように）
             bindings = <&mo>, <&kp>;
         };
 
@@ -205,11 +204,11 @@
         };
 
         // Z：短く押すと z、長押しで Shift（Shift＋クリック、範囲選択、大文字の連続入力用）
-        // 押さえたまま別のキーを「押して離した」ときだけ Shift。文字を打った直後（0.15秒以内）は必ず z
+        // 0.2秒以上押し続けたときだけ Shift。文字を打った直後（0.15秒以内）は必ず z
         z_sft: z_sft {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred"; // 0.2秒以上押し続けたときだけ Shift（速く打てば必ず z）
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
